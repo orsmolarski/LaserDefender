@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
-    Vector2 rawInput;
     [SerializeField] float moveSpeed = 5f;
+    Vector2 rawInput;
+
 
     void Update()
     {
         Move();
     }
 
-    void Move()
-    {
-        Vector3 delta = rawInput * moveSpeed * Time.deltaTime; //Time.deltaTime to smooth
+    void Move(){
+        Vector3 delta = rawInput * moveSpeed * Time.deltaTime; //time.deltaTimesmooth out and make movement framerate indepented 
         transform.position += delta;
     }
 
