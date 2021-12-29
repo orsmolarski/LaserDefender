@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289395813010636967}
   - component: {fileID: 5621426955286752286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyBlack3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190487740055668368}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 204012406733702900}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &5621426955286752286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -96,7 +96,8 @@ GameObject:
   - component: {fileID: -5076283085073146497}
   - component: {fileID: -2047954202084808832}
   - component: {fileID: -4593908184711113544}
-  m_Layer: 0
+  - component: {fileID: 8487510982870029761}
+  m_Layer: 7
   m_Name: Enemy0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,4 +193,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211188960271b47bbaf71f63e6601b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 25
+--- !u!114 &8487510982870029761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223919938767827497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d422f2abaae427fa0dc30ee0a51704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 679959915670799926, guid: 0346b173486fc4665b18e8b6c36cae7c, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  baseFiringRate: 1
+  useAI: 1
+  firingRateVariance: 0.5
+  minimumFiringRate: 0.1
+  isFiring: 0
