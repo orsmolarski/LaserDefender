@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class WaveConfigSO : ScriptableObject 
 {
+    [SerializeField] List<GameObject> enemyPrefabs;
     [SerializeField] Transform pathPrefab;
     [SerializeField] float moveSpeed = 5f;
 
@@ -14,6 +15,14 @@ public class WaveConfigSO : ScriptableObject
         
     }
     
+    public int GetEnemyCount(){
+        return enemyPrefabs.Count;
+    }
+
+    public GameObject GetEnemyPrefab(int index){
+        return enemyPrefabs[index];
+    }
+
     public List<Transform> GetWaypoints(){
         List<Transform> waypoints = new List<Transform> ();
         foreach (Transform child in pathPrefab)
